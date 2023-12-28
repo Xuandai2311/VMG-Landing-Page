@@ -1,11 +1,10 @@
 {
-  "name": "VMG Landing Page",
+  "name": "VMG_Landing_Page",
   "version": "1.0.0",
-  "description": "Tailwind Landing Page (Nuxt.js Version)",
+  "description": "VMG_Landing_Page",
   "author": {
-    "name": "Vanessa Böhner",
-    "email": "boehner.vanessa@gmail.com",
-    "url": "https://vannsl.io/"
+    "name": "Xuandai",
+    "email": "xuandai2311@gmail.com"
   },
   "private": true,
   "scripts": {
@@ -17,8 +16,10 @@
     "test:dev": "jest --watch"
   },
   "dependencies": {
+    "element-ui": "^2.15.14",
     "nuxt": "^2.14.3",
-    "nuxt-svg-loader": "^1.2.0"
+    "nuxt-svg-loader": "^1.2.0",
+    "sass": "^1.69.5"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
