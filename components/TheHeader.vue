@@ -5,41 +5,47 @@
         <logo :isStickable="true" :isSticky="isSticky" />
       </div>
       <div class="block lg:hidden pr-4">
-        <button
-          class="flex items-center p-1 text-orange-800 hover:text-gray-900"
-          @click.prevent.stop="onToggleClick"
-        >
+        <button class="flex items-center p-1 text-gray-900" @click.prevent.stop="onToggleClick">
           <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
       </div>
-      <div>
-        <el-menu
-          :default-active="activeIndex"
-          text-color="#000"
-          class="el-menu-demo font-bold"
-          mode="horizontal"
+      <div
+        :class="show ? 'block' : 'hidden block_mobile'"
+        class="flex items-center justify-end w-full h-full lg:block lg:w-auto lg:h-auto"
+      >
+        <div
+          :class="show ? 'block' : 'hidden'"
+          class="h-screen px-6 pt-2 pb-4 lg:flex lg:items-center lg:p-0 lg:h-auto"
         >
-          <el-menu-item index="home">Trang chủ</el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">Về VMG</template>
-            <el-menu-item index="2-1">Ban điều hành</el-menu-item>
-            <el-menu-item index="2-2">VMG Profile</el-menu-item>
-          </el-submenu>
-          <el-menu-item index="3">Sự kiện</el-menu-item>
-          <el-submenu index="4">
-            <template slot="title">Liên hệ</template>
-            <el-menu-item index="4-1">Hợp tác & tài trợ sự kiện</el-menu-item>
-            <el-menu-item index="4-2">Đề nghị hỗ trợ truyền thông</el-menu-item>
-            <el-menu-item index="4-3">Yêu cầu hỗ trợ</el-menu-item>
-          </el-submenu>
-        </el-menu>
+          <el-menu
+            :default-active="activeIndex"
+            text-color="#000"
+            class="el-menu-demo font-bold"
+            :mode="show ? 'vertical' : 'horizontal'"
+          >
+            <el-menu-item index="home">Trang chủ</el-menu-item>
+            <el-submenu index="2">
+              <template slot="title">Về VMG</template>
+              <el-menu-item index="2-1">Ban điều hành</el-menu-item>
+              <el-menu-item index="2-2">VMG Profile</el-menu-item>
+            </el-submenu>
+            <el-menu-item index="3">Sự kiện</el-menu-item>
+            <el-submenu index="4">
+              <template slot="title">Liên hệ</template>
+              <el-menu-item index="4-1">Hợp tác & tài trợ sự kiện</el-menu-item>
+              <el-menu-item index="4-2">Đề nghị hỗ trợ truyền thông</el-menu-item>
+              <el-menu-item index="4-3">Yêu cầu hỗ trợ</el-menu-item>
+            </el-submenu>
+          </el-menu>
+        </div>
       </div>
-      <button class="bg-base text-white rounded-lg py-1 px-10">
+      <button class="bg-base hidden lg:block text-white rounded-lg py-1 px-16">
         <strong>Đăng ký</strong>
-        <br /><span class="text-xxs">Thành viên hiệp hội</span>
+        <br />
+        <span class="text-xxs">Thành viên hiệp hội</span>
       </button>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -53,6 +59,12 @@ export default {
   name: 'TheHeader',
   components: {
     logo: Logo,
+  },
+  props: {
+    show: {
+      type: Boolean,
+      required: true,
+    },
   },
   data() {
     return {
@@ -87,6 +99,8 @@ export default {
       this.scrollY = window.scrollY
     },
     onToggleClick() {
+      const show = !this.show
+      this.$emit('update:show', show)
       this.isOpen = !this.isOpen
     },
   },

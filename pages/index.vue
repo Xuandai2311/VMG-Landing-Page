@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="mt-20">
     <hero />
     <features />
-    <teasers />
+    <speaker />
     <prices />
     <call-to-action />
   </div>
@@ -11,7 +11,7 @@
 <script>
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
-import Teasers from '@/components/Teasers'
+import Speaker from '@/components/Speaker'
 import Prices from '@/components/Prices'
 import CallToAction from '@/components/CallToAction'
 
@@ -20,7 +20,7 @@ export default {
   components: {
     hero: Hero,
     features: Features,
-    teasers: Teasers,
+    speaker: Speaker,
     prices: Prices,
     'call-to-action': CallToAction
   }
