@@ -1,8 +1,8 @@
 <template>
-  <nav :class="headerClassList" class="fixed w-full z-30 top-0 bg-white">
+  <nav class="fixed w-full z-30 top-0 bg-white">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <div class="pl-4 flex items-center">
-        <logo :isStickable="true" :isSticky="isSticky" />
+        <logo />
       </div>
       <div class="block lg:hidden pr-4">
         <button class="flex items-center p-1 text-gray-900" @click.prevent.stop="onToggleClick">
@@ -12,10 +12,7 @@
           </svg>
         </button>
       </div>
-      <div
-        :class="show ? 'block' : 'hidden block_mobile'"
-        class="flex items-center justify-end w-full h-full lg:block lg:w-auto lg:h-auto"
-      >
+      <div class="flex items-center justify-end w-full h-full lg:block lg:w-auto lg:h-auto">
         <div
           :class="show ? 'block' : 'hidden'"
           class="h-screen px-6 pt-2 pb-4 lg:flex lg:items-center lg:p-0 lg:h-auto"
@@ -26,13 +23,19 @@
             class="el-menu-demo font-bold"
             :mode="show ? 'vertical' : 'horizontal'"
           >
-            <el-menu-item index="home">Trang chủ</el-menu-item>
+            <el-menu-item index="home">
+              <a href="#">Trang chủ</a>
+            </el-menu-item>
             <el-submenu index="2">
               <template slot="title">Về VMG</template>
               <el-menu-item index="2-1">Ban điều hành</el-menu-item>
-              <el-menu-item index="2-2">VMG Profile</el-menu-item>
+              <el-menu-item index="2-2">
+                <a href="#VMG">VMG Profile</a>
+              </el-menu-item>
             </el-submenu>
-            <el-menu-item index="3">Sự kiện</el-menu-item>
+            <el-menu-item index="3">
+              <a href="#timeline">Sự kiện</a>
+            </el-menu-item>
             <el-submenu index="4">
               <template slot="title">Liên hệ</template>
               <el-menu-item index="4-1">Hợp tác & tài trợ sự kiện</el-menu-item>
@@ -42,11 +45,13 @@
           </el-menu>
         </div>
       </div>
-      <button class="bg-base hidden lg:block text-white rounded-lg py-1 px-16">
-        <strong>Đăng ký</strong>
-        <br />
-        <span class="text-xxs">Thành viên hiệp hội</span>
-      </button>
+      <a href="#Event">
+        <button class="bg-base hidden lg:block text-white rounded-lg py-1 px-16">
+          <strong>Đăng ký</strong>
+          <br />
+          <span class="text-xxs">Thành viên hiệp hội</span>
+        </button>
+      </a>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
@@ -68,50 +73,16 @@ export default {
   },
   data() {
     return {
-      scrollY: 0,
-      isOpen: false,
       activeIndex: 'home',
     }
   },
-  computed: {
-    isSticky() {
-      return this.scrollY > 10
-    },
-    headerClassList() {
-      return this.isSticky ? 'bg-white shadow' : ''
-    },
-    navActionClassList() {
-      return this.isSticky ? 'gradient text-white' : 'bg-white text-gray-800'
-    },
-    navContentClassList() {
-      let classList = this.isSticky ? 'bg-white' : 'bg-gray-100'
-      if (!this.isOpen) {
-        classList += ` hidden`
-      }
-      return classList
-    },
-  },
+
   methods: {
-    onClick() {
-      this.isOpen = false
-    },
-    onScroll() {
-      this.scrollY = window.scrollY
-    },
     onToggleClick() {
       const show = !this.show
       this.$emit('update:show', show)
       this.isOpen = !this.isOpen
     },
-  },
-  mounted() {
-    this.scrollY = window.scrollY
-    document.addEventListener('click', this.onClick)
-    document.addEventListener('scroll', this.onScroll)
-  },
-  beforeDestroy() {
-    document.removeEventListener('click', this.onClick, true)
-    document.removeEventListener('scroll', this.onScroll, true)
   },
 }
 </script>

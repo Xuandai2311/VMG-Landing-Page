@@ -1,8 +1,8 @@
 export default {
-  mode: 'universal',
-  /*
-   ** Headers of the page
-   */
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -23,11 +23,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '@/plugins/element-ui.js' }],
+  plugins: [{ src: '~/plugins/element-ui.js' }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -36,7 +36,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-svg-loader'],
+  modules: ['nuxt-svg-loader', '@nuxtjs/axios'],
   purgeCSS: {
     whitelist: ['hidden'],
     whitelistPatterns: [/md:w-[1-6]/]
@@ -45,14 +45,12 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      loaders: {
-        file: {
-          esModule: false
-        }
+    loaders: {
+      sass: {
+        implementation: require('sass')
+      },
+      scss: {
+        implementation: require('sass')
       }
     }
   }

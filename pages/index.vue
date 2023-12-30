@@ -3,8 +3,10 @@
     <hero />
     <features />
     <speaker />
-    <prices />
-    <call-to-action />
+    <event />
+    <timeline />
+    <location/>
+    <introvmg/>
   </div>
 </template>
 
@@ -12,8 +14,10 @@
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import Speaker from '@/components/Speaker'
-import Prices from '@/components/Prices'
-import CallToAction from '@/components/CallToAction'
+import Event from '@/components/Event'
+import Timeline from '~/components/Timeline.vue'
+import Location from '~/components/location.vue'
+import IntroVMG from '~/components/IntroVMG.vue'
 
 export default {
   name: 'LandingPage',
@@ -21,8 +25,10 @@ export default {
     hero: Hero,
     features: Features,
     speaker: Speaker,
-    prices: Prices,
-    'call-to-action': CallToAction
+    event: Event,
+    timeline: Timeline,
+    location: Location,
+    introvmg: IntroVMG
   }
 }
 </script>

@@ -1,9 +1,3 @@
-/*
- ** TailwindCSS Configuration File
- **
- ** Docs: https://tailwindcss.com/docs/configuration
- ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
- */
 module.exports = {
   theme: {
     fontFamily: {
@@ -15,6 +9,12 @@ module.exports = {
       },
       fontSize: {
         xxs: '10px'
+      },
+      boxShadow: {
+        normal: '0px 0px 16px 0px rgba(0, 0, 0, 0.25)'
+      },
+      borderRadius: {
+        '2xl': '16px'
       }
     }
   },

@@ -8,7 +8,7 @@
         />
         <div>
           <h1
-            class="text-base font-bold text-xl my-3"
+            class="text-base font-bold text-2xl my-3"
           >MARKETING "VƯỢT GIÓ RẼ SÓNG" TRONG THỜI KÌ KHỦNG HOẢNG</h1>
           <img class="my-3" src="~assets/img/line.svg?inline" alt slot="svg" />
 
@@ -77,14 +77,7 @@
 </template>
 
 <script>
-import FeatureRight from '@/components/FeatureRight'
-import FeatureLeft from '@/components/FeatureLeft'
-
 export default {
   name: 'Features',
-  components: {
-    'feature-right': FeatureRight,
-    'feature-left': FeatureLeft,
-  },
 }
 </script>

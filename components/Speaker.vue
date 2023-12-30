@@ -1,16 +1,16 @@
 <template>
   <section class="bg-gray-100 py-8">
-    <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+    <div class="container mx-auto px-6 pt-4 pb-12 text-gray-800">
       <div class="text-center">
-        <h1 class="text-base font-bold text-xl my-3">DIỄN GIẢ SỰ KIỆN</h1>
+        <h1 class="text-base font-bold text-2xl my-3">DIỄN GIẢ SỰ KIỆN</h1>
         <img class="my-3 mx-auto" src="~assets/img/line.svg?inline" alt slot="svg" />
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-5">
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 items-start mt-12">
         <div
-          class="grid text-center items-start gap-2"
+          class="grid text-center gap-2"
           style="justify-items: center;"
-          v-for="speaker in listSpeaker"
-          :key="speaker"
+          v-for="(speaker,index) in listSpeaker"
+          :key="index"
         >
           <img :src="getImages(speaker.avt)" :alt="`Diễn giả `+speaker" />
           <p class="text-base font-bold mt-5 uppercase">
