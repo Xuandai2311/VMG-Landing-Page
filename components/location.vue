@@ -4,7 +4,7 @@
       <div>
         <div class="mb-5">
           <h1 class="uppercase text-base font-bold text-2xl my-3">địa điểm tổ chức</h1>
-          <img class="my-3" src="~assets/img/line.svg?inline" alt slot="svg" />
+          <img class="my-3" src="~assets/img/line.png?inline" alt slot="svg" />
         </div>
         <div class="grid gap-5">
           <span class="flex gap-5 items-center">

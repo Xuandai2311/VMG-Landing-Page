@@ -13,7 +13,7 @@
             <img
               class="item-decor my-3 mx-auto absolute z-0"
               style="left: 195px; top: 25px;"
-              src="~assets/img/decor.svg?inline"
+              src="~assets/img/decor.png?inline"
               alt
               slot="svg"
             />
@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="register-form relative">
-        <img src="~/assets/img/bg-register-form.png" class="absolute z-0 h-full lg:h-auto" />
+        <img src="~/assets/img/bg-register-form.png" class="absolute z-0 h-full lg:h-auto w-full" />
         <div class="relative z-10 p-8 lg:p-20">
           <h2 class="uppercase text-white font-bold text-3xl text-center lg:mt-10">
             Đăng ký

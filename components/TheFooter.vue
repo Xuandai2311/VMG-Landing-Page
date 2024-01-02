@@ -8,11 +8,11 @@
           <h2 class="font-bold text-2xl">Liên hệ</h2>
           <p>Mrs. Nguyễn Minh Ngọc - Trưởng Ban Thư Ký</p>
           <span class="flex items-center">
-            <img class="mr-2" src="~assets/img/phone.svg?inline" alt slot="svg" />
+            <img class="mr-2" src="~assets/img/phone.png?inline" alt slot="svg" />
             <p>0398036816</p>
           </span>
           <span class="flex items-center">
-            <img class="mr-2" src="~assets/img/facebook.svg?inline" alt slot="svg" />
+            <img class="mr-2" src="~assets/img/facebook.png?inline" alt slot="svg" />
             <p>Fanpage: VMG - Vietnam Marketing Group</p>
           </span>
         </div>

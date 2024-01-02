@@ -3,7 +3,7 @@
     <div class="container mx-auto px-6 pt-4 pb-12">
       <div class="text-center mb-5">
         <h1 class="text-base font-bold text-xl my-3">AGENDA SỰ KIỆN</h1>
-        <img class="my-3 mx-auto" src="~assets/img/line.svg?inline" alt slot="svg" />
+        <img class="my-3 mx-auto" src="~assets/img/line.png?inline" alt slot="svg" />
       </div>
       <div>
         <span class="flex gap-5 lg:gap-10">
@@ -18,7 +18,7 @@
           <span class="flex items-start gap-5 lg:gap-10">
             <img
               v-if="index != timelines.length - 1"
-              src="~assets/img/time.svg?inline"
+              src="~assets/img/time.png?inline"
               alt
               slot="svg"
             />

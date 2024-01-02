@@ -3,7 +3,7 @@
     <div class="container mx-auto px-6 pt-4 pb-12 text-gray-800">
       <div class="text-center">
         <h1 class="text-base font-bold text-2xl my-3">DIỄN GIẢ SỰ KIỆN</h1>
-        <img class="my-3 mx-auto" src="~assets/img/line.svg?inline" alt slot="svg" />
+        <img class="my-3 mx-auto" src="~assets/img/line.png?inline" alt slot="svg" />
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 items-start mt-12">
         <div
@@ -18,7 +18,7 @@
             <br />
             {{speaker.name}}
           </p>
-          <img class="mx-auto w-12" src="~assets/img/line-mini.svg?inline" alt slot="svg" />
+          <img class="mx-auto w-12" src="~assets/img/line-mini.png?inline" alt slot="svg" />
           <p>{{speaker.position}}</p>
         </div>
       </div>

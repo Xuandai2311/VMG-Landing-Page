@@ -10,7 +10,7 @@
           <h1
             class="text-base font-bold text-2xl my-3"
           >MARKETING "VƯỢT GIÓ RẼ SÓNG" TRONG THỜI KÌ KHỦNG HOẢNG</h1>
-          <img class="my-3" src="~assets/img/line.svg?inline" alt slot="svg" />
+          <img class="my-3" src="~assets/img/line.png?inline" alt slot="svg" />
 
           <p
             class="Break-Words"
@@ -33,7 +33,7 @@
           </p>
           <p class="my-5">Các phiên chủ đề được thảo luận bao gồm:</p>
           <div class="flex items-start gap-6">
-            <img src="~assets/img/message.svg?inline" alt slot="svg" />
+            <img src="~assets/img/message.png?inline" alt slot="svg" />
             <span class="grid gap-3">
               <strong>1. Phiên thảo luận 1:</strong>
               <p>
@@ -43,7 +43,7 @@
             </span>
           </div>
           <div class="flex items-start gap-6 mt-5">
-            <img src="~assets/img/message.svg?inline" alt slot="svg" />
+            <img src="~assets/img/message.png?inline" alt slot="svg" />
             <span class="grid gap-3">
               <strong>2. Phiên thảo luận 2:</strong>
               <p>
