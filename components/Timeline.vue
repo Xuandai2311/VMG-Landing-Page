@@ -7,7 +7,7 @@
       </div>
       <div>
         <span class="flex gap-5 lg:gap-10">
-          <div style="width: 43px;"></div>
+          <div style="width: 50px;"></div>
           <div class="hidden lg:flex gap-20">
             <p class="uppercase font-bold">Thời gian</p>
             <p class="uppercase font-bold">Sự kiện</p>
@@ -22,7 +22,7 @@
               alt
               slot="svg"
             />
-            <div v-else style="width: 43px;"></div>
+            <div v-else style="width: 50px;"></div>
             <div class="flex-row lg:flex gap-4 lg:gap-12">
               <p
                 v-if="item.time"

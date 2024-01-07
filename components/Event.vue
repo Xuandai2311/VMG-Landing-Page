@@ -118,6 +118,20 @@
               <p>Hotline</p>
               <p class="ml-12">039 803 6816</p>
             </span>
+
+            <div>
+              <p class="text-base font-bold uppercase text-2xl pb-3 mt-5">Thông tin thanh toán</p>
+              <div class="ml-5">
+                <ul class="list-disc mb-4">
+                  <li>Tài khoản: MB Bank - 0398036816 - Nguyễn Minh Ngọc</li>
+                  <li>
+                    Nội dung chuyển khoản: SĐT + số lượng vé dinner + DINNER
+                    <br />Ví dụ: 094xxx888 2 DINNER
+                  </li>
+                </ul>
+                <p>Sau khi tiến hành thanh toán, vui lòng gửi hóa đơn thanh toán qua zalo 0395613205 (Thùy Linh) cùng nội dung bao gồm: Họ và tên/ SĐT/ Số lượng đăng ký dinner</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
