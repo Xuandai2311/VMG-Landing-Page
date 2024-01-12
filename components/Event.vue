@@ -248,7 +248,7 @@ export default {
           this.formData.ve_private_dinner = this.ticketPrivate
           this.$axios
             .post(
-              'https://sheet.best/api/sheets/7bf879c3-3950-4c89-93df-f5b0ede03842',
+              'https://sheet.best/api/sheets/d7c4b53a-f0a2-4e2a-a9c3-42b1fd877e11',
               this.formData
             )
             .then((response) => {
@@ -260,7 +260,7 @@ export default {
               console.log(response)
             })
             .catch((error) => {
-              this.$message.success('Đăng ký thất bại, vui lòng đăng ký lại')
+              this.$message.error('Đăng ký thất bại, vui lòng đăng ký lại')
               this.isLoading = false
               console.log(error)
             })
